@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Document</title>
+</head>
+<body>
+   <h1>Movie Form</h1>
+   <form action="">
+       <fieldset>
+           <label for="">
+               Title <br/>
+               <input type="text" id="movie-title" placeholder="Enter movie title">
+           </label>
+           <label for="">
+                Length <br/>
+                <input type="number" id="movie-length" placeholder="Enter movie length">
+            </label>
+            <label for="">
+                Genre:
+                <select name="" id="movie-genre">
+            
+
+                <option>-</option>
+                <option>Drama</option>
+                <option>Comedy</option>
+                <option>Action</option>
+                <option>Horror</option>
+
+            </select>
+        </label>
+            <input type="button" id="submit-movie" value="Create Movie" class="btn">
+            <ul class="movie-list"></ul>
+            <div class="length">Total movie length:<div id="total-length"></div></div> 
+       </fieldset>
+      
+   </form>
+
+   
+
+   <script src="./app.js" type="module"></script>
+   <script type="module">
+       import {init} from "./app.js";
+       init();
+   </script>
+</body>
+</html>
