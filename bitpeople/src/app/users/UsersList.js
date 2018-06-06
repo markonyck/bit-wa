@@ -1,36 +1,55 @@
 import React, { Component } from "react"
 import { SingleUser } from "./SingleUser"
-import { fetchUsers } from "../../services/fetchUsers";
+import { SinglePhotoUser } from "./SinglePhotoUser"
+// import { fetchUsers } from "../../services/fetchUsers";
 
 
 export class UsersList extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            users: []
-        }
+        // this.state = {
+        //     users: [], 
+            
+        // }
+       
+    }
+    // ne mora da e pise kostruktor da bi setovali state. vec state = {}. On automatski u pozadini napise to kao ovde sto je u konstruktoru.
+    
+    renderSingleUser(users) {
+        return (
+            <div className="collection">
+                {users.map((user, index) => {
+                    return <SingleUser myUser={user} key={index} />
+                })}
+            </div>
+        )
     }
 
-    componentDidMount() {
-        fetchUsers()
-            .then(users => {
-                this.setState({
-                    users: users
-                })
-            })
+    renderSinglePhotoUser(users) {
+        return (
+            <div className="collection">
+                {users.map((user, index) => {
+                    return <SinglePhotoUser myUser={user} key={index} />
+                })}
+            </div>
+        )
     }
+
+   
 
     render() {
-        const { users } = this.state;
+        const users = this.props.newUser
+        const { viewMode } = this.props;
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col s12">
-                        <div className="collection">
-                            {users.map(user => {
-                                return <SingleUser myUser={user} />
-                            })}
-                        </div>
+                        {
+                            viewMode
+                                ?  this.renderSingleUser(users)
+                                :  this.renderSinglePhotoUser(users)
+                        }
                     </div>
                 </div>
             </div>
