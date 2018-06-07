@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom"
 
 
 export const Header = (props) => {
@@ -8,8 +8,9 @@ export const Header = (props) => {
     return (
         <nav>
             <div className="nav-wrapper">
-                <a href="#!" className="brand-logo center">Bit People</a>
+                <Link className="brand-logo center" to="/">Bit People</Link>
                 <ul className="right hide-on-med-and-down">
+                <li><Link to="/about"> About</Link></li>
                     <li><i className="material-icons" onClick={() => updateHandler()}>refresh</i></li>
                     {
                         viewMode
@@ -17,7 +18,7 @@ export const Header = (props) => {
                             : <li><i className="material-icons" onClick={() => listLayoutActive(viewMode)}>view_list</i></li>
                     }
                 </ul>
-            </div>
+            </div>    
         </nav>
     )
 }
