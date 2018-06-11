@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 const numOfPosts = (author, posts) => {
     return posts.filter(post => author.id === post.userId).length;

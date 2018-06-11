@@ -8,6 +8,7 @@ import { Home } from "./Home"
 import { About } from "./About";
 import { Authors } from "./Authors";
 import { fetchPosts } from "../services/fetchPosts"
+import SinglePostPage from './SinglePostPage';
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/authors' component={Authors} />
           <Route exact path='/about' component={About} />
+          <Route exact path="/posts/:id" component={SinglePostPage} />
         </Switch>
         <Footer />
 

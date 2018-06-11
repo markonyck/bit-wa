@@ -1,4 +1,4 @@
-import { postsEndpoint, postFromAuthorEndpoint } from "../shared/constants.js"
+import { postsEndpoint, postFromAuthorEndpoint, singlePostEndpoint } from "../shared/constants.js"
 import { Post } from "../entities/Post.js"
 
 
@@ -21,9 +21,13 @@ const myPost = (posts) => posts.map (post => {
     return new Post (id, title, body, userId);
 })
 
-const fetchPostsFromAuthor = () => {
-    return fetch(postFromAuthorEndpoint)
+const fetchPost = (id) => {
+    return fetch(singlePostEndpoint+id)
+    .then(response => {
+        return response.json(); 
+    })
+
 }
 
-export { fetchPosts, fetchPostsFromAuthor }
+export { fetchPosts, fetchPost }
 
