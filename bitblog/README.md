@@ -27,10 +27,10 @@
     </Header>
     <MainHome>
       <h2 /> <!-- POSTS -->
-      <card> <!-- Iteration of posts -->
+      <Posts> <!-- Iteration of posts -->
         <h1 /> <!-- Link to Single Post Page -->
         <p />
-      </card>
+      </Posts>
     </MainHome>
     <Footer /> <!-- Copyrigth (C) BIT 2018 -->
   </Home>

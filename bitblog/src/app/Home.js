@@ -12,7 +12,7 @@ export class Home extends Component {
     }
 
   }
-  
+
   loadPosts = () => {
     fetchPosts()
     .then(posts => {
@@ -30,7 +30,7 @@ export class Home extends Component {
       return (
       <div className="row">
       <h3 className="center-align">POSTS</h3>
-      <PostItem posts={this.state.posts} key={this.state.posts.id}/>)}
+      <PostItem posts={this.state.posts} key={this.state.posts.id}/>
     </div>
       )
     }

@@ -14,7 +14,7 @@ export const fetchAuthors = () =>{
 
 const myAuthor = (authors) => authors.map (author => {
     const id = author.id
-    const name = name.title
+    const name = author.name
 
     return new Author (id, name);
 })
