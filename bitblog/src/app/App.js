@@ -6,20 +6,23 @@ import { Footer } from "./partials/Footer";
 import { Header } from "./partials/Header";
 import { Home } from "./Home"
 import { About } from "./About";
+import { Authors } from "./Authors";
+import { fetchPosts } from "../services/fetchPosts"
 
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-       
-        <Header  />
-       <Switch>
-          <Route exact path='/' render={()=> <Home />} />
-          <Route exact path='/about' render={()=> <About />} />
-        </Switch> 
-      <Footer />
-     
+
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/authors' component={Authors} />
+          <Route exact path='/about' component={About} />
+        </Switch>
+        <Footer />
+
       </React.Fragment>
     );
   }

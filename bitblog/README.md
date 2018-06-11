@@ -16,6 +16,10 @@
     </MainContentCreatePost>
     <Footer /> <!-- Copyrigth (C) BIT 2018 -->
   </CreatePost>
+  </App>
+
+
+  <App>
   <Home>
     <Header>
       <h1 /> <!-- BIT BLOG-->
@@ -47,12 +51,30 @@
     </MainAuthors>
     <Footer /> <!-- Copyrigth (C) BIT 2018 -->
   </Authors>
+  <About>
+    <Header>
+      <h1 /> <!-- BIT BLOG-->
+      <nav /> <!-- Home | Authors | Blog -->
+    </Header>
+    <MainContentAbout>
+      <h2 />
+      <p />
+    </MainContentAbout>
+    <Footer /> <!-- Copyrigth (C) BIT 2018 -->
+  </About>
+</App>
+  
+  
   <Author>
     <Header>
       <h1 /> <!-- BIT BLOG-->
       <nav /> <!-- Home | Authors | Blog -->
     </Header>
     <MainContentAuthor>
+      <MainContentAuthorHeader>
+      <h2 /> <!-- Single Author-->
+      <link /> <!-- back to authors -->
+      </MainContentAuthorHeader>
       <NameCard>
         <img />
         <h2 {Name}{Surname} />
@@ -75,17 +97,8 @@
     </MainContentAuthor>
     <Footer /> <!-- Copyrigth (C) BIT 2018 -->
   </Author>
-  <About>
-    <Header>
-      <h1 /> <!-- BIT BLOG-->
-      <nav /> <!-- Home | Authors | Blog -->
-    </Header>
-    <MainContentAbout>
-      <h2 />
-      <p />
-    </MainContentAbout>
-    <Footer /> <!-- Copyrigth (C) BIT 2018 -->
-  </About>
+
+
   <SinglePost>
       <Header>
         <h1 /> <!-- BIT BLOG-->
@@ -104,5 +117,5 @@
       </MainContentSinglePost>
       <Footer /> <!-- Copyrigth (C) BIT 2018 -->
   </SinglePost>
-<App />
+
   
