@@ -1,8 +1,12 @@
 export class Author {
-    constructor(id, name) {
+    constructor(id, name, username, email, phone, address, company) {
         this.id = id;
         this.name = name;
-        this.counter = 0;
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.company = company;
     }
 
 }

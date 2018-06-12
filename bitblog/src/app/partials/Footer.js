@@ -6,7 +6,7 @@ export const Footer = (props) => {
 
             <div className="footer-copyright">
                 <div className="container center-align black-text">
-                  Copyright © BIT {new Date().getFullYear()}
+                  Copyright © Marko &amp; Emil {new Date().getFullYear()}
                 </div>
             </div>
         </footer>

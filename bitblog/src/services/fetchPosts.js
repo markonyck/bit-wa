@@ -12,6 +12,7 @@ const fetchPosts = () =>{
 }
 
 
+
 const myPost = (posts) => posts.map (post => {
     const id = post.id
     const title = post.title
@@ -21,6 +22,15 @@ const myPost = (posts) => posts.map (post => {
     return new Post (id, title, body, userId);
 })
 
+const mySinglePost = post => {
+    const id = post.id
+    const title = post.inputTitleValue
+    const body = post.inputTextValue
+    const userId = post.userId;
+   
+    return new Post (id, title, body, userId);
+}
+
 const fetchPost = (id) => {
     return fetch(singlePostEndpoint+id)
     .then(response => {
@@ -29,5 +39,12 @@ const fetchPost = (id) => {
 
 }
 
-export { fetchPosts, fetchPost }
+const fetchAuthorPosts = (authorId) => {
+    return fetch(postFromAuthorEndpoint+authorId)
+    .then(response => {
+        return response.json(); 
+    })
+}
+
+export { fetchPosts, fetchPost, fetchAuthorPosts, mySinglePost }
 
